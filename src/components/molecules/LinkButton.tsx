@@ -1,12 +1,12 @@
 import Link from "next/link";
 import React from "react";
 
-type HeaderButtonProps = {
+type LinkButtonProps = {
   text: string;
   path: string;
 };
 
-const HeaderButton = (props: HeaderButtonProps) => {
+const LinkButton = (props: LinkButtonProps) => {
   const { text, path } = props;
   return (
     <div className="mx-5">
@@ -19,4 +19,4 @@ const HeaderButton = (props: HeaderButtonProps) => {
   );
 };
 
-export default HeaderButton;
+export default LinkButton;

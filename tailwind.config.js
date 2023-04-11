@@ -9,14 +9,18 @@ module.exports = {
     extend: {
       animation: {
         "slide-in-bottom":
-          "slide-in-bottom 1.0s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both",
+          "slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both",
+        "slide-in-up":
+          "slide-in-up 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
+        "slide-out-up":
+          "slide-out-up 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
         "scale-up-bottom":
           "scale-up-bottom 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both",
       },
       keyframes: {
         "slide-in-bottom": {
           "0%": {
-            transform: "translateY(20px)",
+            transform: "translateY(100px)",
             opacity: "0",
           },
           to: {
@@ -24,6 +28,23 @@ module.exports = {
             opacity: "1",
           },
         },
+        "slide-in-up": {
+          "0%": {
+            transform: "translateY(-100vh)",
+          },
+          to: {
+            transform: "translateY(0)",
+          },
+        },
+        "slide-out-up": {
+          "0%": {
+            transform: "translateY(0)",
+          },
+          to: {
+            transform: "translateY(-100vh)",
+          },
+        },
+
         "scale-up-bottom": {
           "0%": {
             transform: "scale(.5)",

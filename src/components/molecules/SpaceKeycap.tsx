@@ -1,10 +1,10 @@
 import React from "react";
 import TemplateKeycap from "./TemplateKeycap";
+import { KeycapProps } from "../interface/Keycap";
 
-const SpaceKeycap = () => {
-  return (
-    <div className="m-0.5 aspect-[1/0.15] rounded-md border-2 border-solid border-white"></div>
-  );
+export const SpaceKeycap = (props: KeycapProps) => {
+  const { delay } = props;
+  return <TemplateKeycap ratio="aspect-[1/0.15]" delay={delay} />;
 };
 
 export default SpaceKeycap;
