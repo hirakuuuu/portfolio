@@ -1,14 +1,11 @@
-import Header from "@/components/organisms/Header";
 import React from "react";
+import { getDatabase } from "@/lib/notion";
+
 import {
   NotionAPIProps,
   NotionPost,
-  NotionAPIPost,
 } from "@/components/interface/NotionInterface";
-import SkillCard from "@/components/organisms/SkillCard";
-
-import { getDatabase } from "@/lib/notion";
-import TitleBanner from "@/components/organisms/TitleBanner";
+import SkillPannel from "@/components/organisms/SkillPannel";
 
 const Skills = (props: NotionAPIProps) => {
   const { posts } = props;
@@ -28,70 +25,21 @@ const Skills = (props: NotionAPIProps) => {
       post.properties.tag.type === "multi_select"
         ? post.properties.tag.multi_select[0].name
         : "NaN";
-    if (tag === "front") {
+    if (tag === "Front") {
       frontPosts.push(post);
-    } else if (tag === "back") {
+    } else if (tag === "Back") {
       backPosts.push(post);
-    } else if (tag === "devops") {
+    } else if (tag === "DevOps") {
       devOpsPosts.push(post);
     }
   });
 
   return (
     <>
-      <div className="mx-4 text-center md:mx-16">
-        <TitleBanner title="FrontEnd" />
-        <div className="mb-16 grid grid-cols-1 gap-y-16  md:grid-cols-2 md:gap-x-8">
-          {frontPosts.map((post: NotionPost) => {
-            const postName =
-              post.properties.name.type === "title"
-                ? post.properties.name.title[0].plain_text
-                : "NaN";
-            const postImage =
-              post.properties.image.type === "rich_text"
-                ? post.properties.image.rich_text[0].plain_text
-                : "NaN";
-            const postDetail =
-              post.properties.detail.type === "rich_text"
-                ? post.properties.detail.rich_text[0].plain_text
-                : "NaN";
-
-            return (
-              <SkillCard
-                key={post.id}
-                name={postName}
-                image={postImage}
-                detail={postDetail}
-              />
-            );
-          })}
-        </div>
-        <div>Back End</div>
-        <div className="mb-32 grid grid-cols-1 gap-y-16  md:grid-cols-2 md:gap-x-8">
-          {backPosts.map((post: NotionPost) => {
-            const postName =
-              post.properties.name.type === "title"
-                ? post.properties.name.title[0].plain_text
-                : "NaN";
-            const postImage =
-              post.properties.image.type === "rich_text"
-                ? post.properties.image.rich_text[0].plain_text
-                : "NaN";
-            const postDetail =
-              post.properties.detail.type === "rich_text"
-                ? post.properties.detail.rich_text[0].plain_text
-                : "NaN";
-
-            return (
-              <SkillCard
-                key={post.id}
-                name={postName}
-                image={postImage}
-                detail={postDetail}
-              />
-            );
-          })}
-        </div>
+      <div className="mx-4 text-center md:mx-16 2xl:mx-32">
+        <SkillPannel title={"FrontEnd"} posts={frontPosts} />
+        <SkillPannel title={"BackEnd"} posts={backPosts} />
+        <SkillPannel title={"DevOps"} posts={devOpsPosts} />
       </div>
     </>
   );

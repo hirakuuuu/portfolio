@@ -22,6 +22,7 @@ module.exports = {
           "slide-mask-down 1.0s cubic-bezier(0.800, 0.00, 0.170, 1.000) both",
         "fuwafuwa-move": "fuwafuwa-move 2.0s ease-in-out infinite both",
         "scale-up-move": "scale-up-move 1.2s ease  both",
+        "slide-line": "slide-line 1.0s ease  both",
       },
       keyframes: {
         "slide-in-bottom": {
@@ -71,12 +72,12 @@ module.exports = {
             "transform-origin": "50% 100%",
           },
         },
-        "slide-mask-down": {
+        "slide-line": {
           "0%": {
-            height: "100%",
+            width: "0",
           },
           to: {
-            height: "0",
+            width: "110%",
           },
         },
         "fuwafuwa-move": {
