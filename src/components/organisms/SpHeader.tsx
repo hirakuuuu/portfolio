@@ -9,7 +9,7 @@ const SpHeader = () => {
       {isMenuVisible >= 0 && (
         <div
           className={
-            "fixed left-0 top-0 z-10 block h-screen w-full animate-slide-in-up bg-[#3d3d3b]/50 " +
+            "fixed left-0 top-0 z-10 block h-screen w-full  animate-slide-in-up bg-[#3d3d3b]/80 " +
             (isMenuVisible === 1
               ? "animate-slide-in-up"
               : isMenuVisible === 0
@@ -17,7 +17,7 @@ const SpHeader = () => {
               : "")
           }
         >
-          <ul className="flex h-full flex-col items-center justify-center p-0">
+          <ul className="flex h-full -translate-y-[10vh] flex-col items-center justify-center p-0">
             <li className="my-4 p-0">
               <SpLinkButton
                 text="home"
@@ -47,9 +47,9 @@ const SpHeader = () => {
             </li>
 
             <li
-              className="text-md relative pl-5 text-[#ebedec]
-            before:absolute before:left-0 before:top-1/2 before:block before:h-[1px] before:w-[16px] before:rotate-45 before:bg-[#ebedec] before:content-[''] 
-            after:absolute after:left-0 after:top-1/2 after:block after:h-[1px] after:w-[16px] after:-rotate-45 after:bg-[#ebedec] after:content-['']"
+              className="relative pl-5 text-xl text-[#ffffff]
+            before:absolute before:left-0 before:top-1/2 before:block before:h-[2px] before:w-[16px] before:rotate-45 before:bg-[#ebedec] before:content-[''] 
+            after:absolute after:left-0 after:top-1/2 after:block after:h-[2px] after:w-[16px] after:-rotate-45 after:bg-[#ebedec] after:content-['']"
               onClick={() => setIsMenuVisible(0)}
             >
               <span>閉じる</span>

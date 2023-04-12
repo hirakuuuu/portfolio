@@ -9,13 +9,15 @@ module.exports = {
     extend: {
       animation: {
         "slide-in-bottom":
-          "slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both",
+          "slide-in-bottom 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86)  both",
         "slide-in-up":
           "slide-in-up 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
         "slide-out-up":
           "slide-out-up 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
         "scale-up-bottom":
           "scale-up-bottom 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both",
+        "slide-mask-down":
+          "slide-mask-down 1.2s cubic-bezier(0.800, 0.00, 0.170, 1.000) both",
       },
       keyframes: {
         "slide-in-bottom": {
@@ -53,6 +55,14 @@ module.exports = {
           to: {
             transform: "scale(1)",
             "transform-origin": "50% 100%",
+          },
+        },
+        "slide-mask-down": {
+          "0%": {
+            transform: "translateY(0)",
+          },
+          to: {
+            transform: "translateY(100vh)",
           },
         },
       },

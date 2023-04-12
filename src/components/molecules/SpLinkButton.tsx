@@ -10,10 +10,10 @@ export type SpLinkButtonProps = {
 const SpLinkButton = (props: SpLinkButtonProps) => {
   const { text, path, onClick } = props;
   return (
-    <div className="block text-center">
+    <div className="my-2 block text-center">
       <Link href={path} onClick={onClick}>
         <button>
-          <span className="text-xl text-[#ebedec]">{text}</span>
+          <span className="text-2xl text-[#ffffff]">{text}</span>
         </button>
       </Link>
     </div>
