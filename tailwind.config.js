@@ -10,24 +10,46 @@ module.exports = {
       animation: {
         "slide-in-bottom":
           "slide-in-bottom 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86)  both",
+        "slide-key-in-up":
+          "slide-key-in-up 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
         "slide-in-up":
           "slide-in-up 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
         "slide-out-up":
-          "slide-out-up 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
+          "slide-out-up 0.75s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
         "scale-up-bottom":
           "scale-up-bottom 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both",
         "slide-mask-down":
-          "slide-mask-down 1.2s cubic-bezier(0.800, 0.00, 0.170, 1.000) both",
+          "slide-mask-down 1.0s cubic-bezier(0.800, 0.00, 0.170, 1.000) both",
+        "fuwafuwa-move": "fuwafuwa-move 2.0s ease-in-out infinite both",
+        "scale-up-move": "scale-up-move 1.2s ease  both",
       },
       keyframes: {
         "slide-in-bottom": {
           "0%": {
-            transform: "translateY(100px)",
+            transform: "translateY(50px)",
             opacity: "0",
           },
           to: {
             transform: "translateY(0)",
             opacity: "1",
+          },
+        },
+        "slide-key-in-up": {
+          "0%": {
+            transform: "translateY(-100px)",
+            opacity: "0",
+          },
+          to: {
+            transform: "translateY(0)",
+            opacity: "1",
+          },
+        },
+        "slide-out-up": {
+          "0%, 33%": {
+            transform: "translateY(0)",
+          },
+          to: {
+            transform: "translateY(-100vh)",
           },
         },
         "slide-in-up": {
@@ -36,14 +58,6 @@ module.exports = {
           },
           to: {
             transform: "translateY(0)",
-          },
-        },
-        "slide-out-up": {
-          "0%": {
-            transform: "translateY(0)",
-          },
-          to: {
-            transform: "translateY(-100vh)",
           },
         },
 
@@ -59,10 +73,32 @@ module.exports = {
         },
         "slide-mask-down": {
           "0%": {
-            transform: "translateY(0)",
+            height: "100%",
           },
           to: {
-            transform: "translateY(100vh)",
+            height: "0",
+          },
+        },
+        "fuwafuwa-move": {
+          "0%": {
+            transform: "translateY(0px)",
+          },
+          "50%": {
+            transform: "translateY(-10px)",
+          },
+          "100%": {
+            transform: "translateY(0px)",
+          },
+        },
+        "scale-up-move": {
+          "0%": {
+            transform: "scale(1)",
+          },
+          "50%": {
+            transform: "scale(0.9)",
+          },
+          "100%": {
+            transform: "scale(1)",
           },
         },
       },

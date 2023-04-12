@@ -4,7 +4,7 @@ import Keyboard from "@/components/organisms/Keyboard";
 const Home = () => {
   return (
     <>
-      <div className="mt-[15vh] text-center align-middle">
+      <div className="text-center align-middle 2xl:mt-[15vh]">
         <div className="my-10 text-2xl text-[#4c5870] md:text-4xl">
           Hiraku Morimoto's Portfolio
         </div>
@@ -13,7 +13,7 @@ const Home = () => {
           <span className="block md:hidden">
             <br />
           </span>
-          <span className="mr-6">自然情報学科数理情報系</span>
+          <span className="md:mr-6">自然情報学科数理情報系</span>
           <span className="block md:hidden">
             <br />
           </span>

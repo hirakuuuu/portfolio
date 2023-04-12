@@ -67,15 +67,18 @@ const FifthKeyLine = () => {
 const Keyboard = () => {
   return (
     <>
-      <div className="overflow-hidden after:absolute after:bottom-0 after:left-0 after:top-0 after:block after:translate-y-0 after:animate-slide-mask-down after:bg-[#ebedec] "></div>
-      <div className="flex justify-center">
-        <div className="aspect-[1/0.39] w-[95%] max-w-[760px] bg-[#3d3d3b] md:block md:w-3/4">
-          <div className="h-[10%]"></div>
-          <FirstKeyLine />
-          <SecondKeyLine />
-          <ThirdKeyLine />
-          <FourthKeyLine />
-          <FifthKeyLine />
+      <div className="animate-key-slide-in-up mb-4 [animation-delay:1.0s]">
+        <div className="animate-scale-up-move [animation-delay:8.0s]">
+          <div className="flex animate-fuwafuwa-move justify-center  [animation-delay:10.0s]">
+            <div className="aspect-[1/0.39] w-[95%] max-w-[760px] bg-[#3d3d3b] md:block md:w-3/4 ">
+              <div className="h-[10%]"></div>
+              <FirstKeyLine />
+              <SecondKeyLine />
+              <ThirdKeyLine />
+              <FourthKeyLine />
+              <FifthKeyLine />
+            </div>
+          </div>
         </div>
       </div>
     </>
