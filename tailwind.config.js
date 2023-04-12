@@ -15,7 +15,7 @@ module.exports = {
         "slide-in-up":
           "slide-in-up 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
         "slide-out-up":
-          "slide-out-up 0.75s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
+          "slide-out-up 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
         "scale-up-bottom":
           "scale-up-bottom 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both",
         "slide-mask-down":
@@ -45,7 +45,7 @@ module.exports = {
           },
         },
         "slide-out-up": {
-          "0%, 33%": {
+          "0%": {
             transform: "translateY(0)",
           },
           to: {
