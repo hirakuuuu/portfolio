@@ -67,7 +67,7 @@ const FifthKeyLine = () => {
 const Keyboard = () => {
   return (
     <>
-      <div className="animate-key-slide-in-up mb-4 [animation-delay:1.0s]">
+      <div className="mb-4 animate-keyboard-slide-in-up [animation-delay:1.0s]">
         <div className="animate-scale-up-move [animation-delay:8.0s]">
           <div className="flex animate-fuwafuwa-move justify-center  [animation-delay:10.0s]">
             <div className="aspect-[1/0.39] w-[95%] max-w-[760px] bg-[#3d3d3b] md:block md:w-3/4 ">

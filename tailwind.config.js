@@ -10,8 +10,8 @@ module.exports = {
       animation: {
         "slide-in-bottom":
           "slide-in-bottom 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86)  both",
-        "slide-key-in-up":
-          "slide-key-in-up 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
+        "keyboard-slide-in-up":
+          "keyboard-slide-in-up 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
         "slide-in-up":
           "slide-in-up 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
         "slide-out-up":
@@ -34,7 +34,7 @@ module.exports = {
             opacity: "1",
           },
         },
-        "slide-key-in-up": {
+        "keyboard-slide-in-up": {
           "0%": {
             transform: "translateY(-100px)",
             opacity: "0",
