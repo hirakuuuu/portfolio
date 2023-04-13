@@ -30,7 +30,7 @@ const Experiences = (props: NotionAPIProps) => {
         <TitleBanner title="Experiences" />
       </div>
 
-      <div className="mx-auto my-10 w-[90%] max-w-[1024px]">
+      <div className="experience-card mx-auto my-10 w-[90%] max-w-[1024px]">
         {publishedPosts.map((post, index) => {
           const postName =
             post.properties.name.type === "title"

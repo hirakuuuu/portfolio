@@ -23,6 +23,8 @@ module.exports = {
         "fuwafuwa-move": "fuwafuwa-move 2.0s ease-in-out infinite both",
         "scale-up-move": "scale-up-move 1.2s ease  both",
         "slide-line": "slide-line 1.0s ease  both",
+        "rotate-to-right": "rotate-to-right 0.2s ease-in both",
+        "rotate-to-left": "rotate-to-left 0.2s ease-in both",
       },
       keyframes: {
         "slide-in-bottom": {
@@ -100,6 +102,22 @@ module.exports = {
           },
           "100%": {
             transform: "scale(1)",
+          },
+        },
+        "rotate-to-right": {
+          "0%": {
+            transform: "rotate(45deg)",
+          },
+          to: {
+            transform: "rotate(-45deg)",
+          },
+        },
+        "rotate-to-left": {
+          "0%": {
+            transform: "rotate(45deg)",
+          },
+          to: {
+            transform: "rotate(135deg)",
           },
         },
       },
