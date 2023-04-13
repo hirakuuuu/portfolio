@@ -31,7 +31,7 @@ const Experiences = (props: NotionAPIProps) => {
       </div>
 
       <div className="mx-auto my-10 w-[90%] max-w-[1024px]">
-        {publishedPosts.map((post) => {
+        {publishedPosts.map((post, index) => {
           const postName =
             post.properties.name.type === "title"
               ? post.properties.name.title[0].plain_text
@@ -47,6 +47,7 @@ const Experiences = (props: NotionAPIProps) => {
           return (
             <ExperiencePannel
               key={post.id}
+              isRight={index % 2 == 0}
               title={postName}
               date={postDate}
               detail={postDetail}
