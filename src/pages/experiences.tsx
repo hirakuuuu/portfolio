@@ -21,7 +21,6 @@ const Experiences = (props: NotionAPIProps) => {
     )
       return;
     publishedPosts.push(post);
-    console.log(post.properties);
   });
 
   return (
