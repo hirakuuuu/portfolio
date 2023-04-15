@@ -38,8 +38,8 @@ const RightExperiencePannel = (props: SubExperiencePannelProps) => {
       className="relative -translate-x-[1px] border-l-2  border-solid border-[#4c5870] pb-6 pl-6 pt-10
         before:absolute before:left-6 before:top-1 before:block before:pt-2 before:text-sm before:font-bold 
           before:content-[attr(date-is)]  after:absolute after:left-[-11px] after:top-[54px] after:block after:h-[20px] after:w-[20px] after:rotate-45
-          after:animate-rotate-to-right after:rounded-t-xl  after:rounded-bl-xl after:border-2  after:border-solid after:border-[#4c5870]
-          after:bg-white after:content-[''] after:[animation-delay:1.0s] md:ml-[50%] md:pr-6 "
+           after:rounded-t-xl  after:rounded-bl-xl after:border-2  after:border-solid after:border-[#4c5870]
+          after:bg-white after:content-['']　md:ml-[50%] md:pr-6 "
       date-is={date}
     >
       <div className="mb-2 text-3xl">{title}</div>
@@ -52,10 +52,10 @@ const LeftExperiencePannel = (props: SubExperiencePannelProps) => {
   const { title, date, detail } = props;
   return (
     <div
-      className="relative translate-x-[1px]  border-r-2  border-solid border-[#4c5870] pb-6 pl-6 pt-10
-        before:absolute before:top-1 before:block before:pt-2 before:text-sm before:font-bold before:content-[attr(date-is)] 
-          after:absolute  after:right-[-11px] after:top-[54px] after:block after:h-[20px] after:w-[20px] after:rotate-45 after:animate-rotate-to-left
-          after:rounded-t-xl after:rounded-bl-xl  after:border-2 after:border-solid  after:border-[#4c5870] after:bg-white after:content-[''] after:[animation-delay:1.0s] md:mr-[50%] md:pr-6"
+      className="relative  translate-x-[1px]  border-r-2 border-solid border-[#4c5870] pb-6 pl-6
+        pt-10 before:absolute before:top-1 before:block before:pt-2 before:text-sm before:font-bold 
+          before:content-[attr(date-is)]  after:absolute after:right-[-11px] after:top-[54px] after:block after:h-[20px] after:w-[20px] after:rotate-45
+          after:rounded-t-xl after:rounded-bl-xl  after:border-2 after:border-solid  after:border-[#4c5870] after:bg-white after:content-[''] md:mr-[50%] md:pr-6"
       date-is={date}
     >
       <div className="mb-2 text-3xl">{title}</div>
