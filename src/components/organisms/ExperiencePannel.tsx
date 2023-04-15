@@ -39,7 +39,7 @@ const RightExperiencePannel = (props: SubExperiencePannelProps) => {
         before:absolute before:left-6 before:top-1 before:block before:pt-2 before:text-sm before:font-bold 
           before:content-[attr(date-is)]  after:absolute after:left-[-11px] after:top-[54px] after:block after:h-[20px] after:w-[20px] after:rotate-45
            after:rounded-t-xl  after:rounded-bl-xl after:border-2  after:border-solid after:border-[#4c5870]
-          after:bg-white after:content-['']　md:ml-[50%] md:pr-6 "
+          after:bg-white after:content-[''] md:ml-[50%] md:pr-6 "
       date-is={date}
     >
       <div className="mb-2 text-3xl">{title}</div>
