@@ -4,7 +4,7 @@ import React from "react";
 const MyHead = () => {
   return (
     <Head>
-      <title>hirakuuuu-portfolio</title>
+      <title>Hiraku MORIMOTO</title>
     </Head>
   );
 };
