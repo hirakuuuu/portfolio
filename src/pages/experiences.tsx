@@ -26,7 +26,7 @@ const Experiences = (props: NotionAPIProps) => {
   return (
     <>
       <div className="text-center">
-        <TitleBanner title="Experiences" />
+        <TitleBanner title="experiences" />
       </div>
 
       <div className="experience-card mx-auto my-10 w-[90%] max-w-[1024px]">

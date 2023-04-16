@@ -25,7 +25,7 @@ const Works = (props: NotionAPIProps) => {
   return (
     <>
       <div className="mx-4 text-center md:mx-16 2xl:mx-32">
-        <TitleBanner title="Works" />
+        <TitleBanner title="works" />
         <div className="mb-16 grid grid-cols-1 gap-y-16 md:grid-cols-2 md:gap-x-8 2xl:grid-cols-3">
           {publishedPosts.map((post: NotionPost) => {
             const postName =

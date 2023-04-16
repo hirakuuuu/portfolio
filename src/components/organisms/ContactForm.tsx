@@ -119,9 +119,9 @@ export default () => {
             >
               {!status.submitting
                 ? !status.submitted
-                  ? "Submit"
-                  : "Submitted"
-                : "Submitting..."}
+                  ? "送信"
+                  : "送信完了"
+                : "送信中..."}
             </button>
           </div>
         </form>

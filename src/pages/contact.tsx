@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <>
       <div className="text-center">
-        <TitleBanner title="Contact" />
+        <TitleBanner title="contact" />
         <div className="mt-12 text-[#4c5870]">
           ご覧いただきありがとうございます。
           <span className="md:hidden">

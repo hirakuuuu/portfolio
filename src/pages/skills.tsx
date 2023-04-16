@@ -14,6 +14,7 @@ const Skills = (props: NotionAPIProps) => {
   const frontPosts: NotionPost[] = [];
   const backPosts: NotionPost[] = [];
   const devOpsPosts: NotionPost[] = [];
+  const otherPosts: NotionPost[] = [];
   _posts.map((post: NotionPost) => {
     if (
       post.properties.publish.type === "checkbox"
@@ -31,15 +32,18 @@ const Skills = (props: NotionAPIProps) => {
       backPosts.push(post);
     } else if (tag === "DevOps") {
       devOpsPosts.push(post);
+    } else if (tag === "Others") {
+      otherPosts.push(post);
     }
   });
 
   return (
     <>
       <div className="mx-4 text-center md:mx-16 2xl:mx-32">
-        <SkillPannel title={"FrontEnd"} posts={frontPosts} />
-        <SkillPannel title={"BackEnd"} posts={backPosts} />
-        <SkillPannel title={"DevOps"} posts={devOpsPosts} />
+        <SkillPannel title={"frontend"} posts={frontPosts} />
+        <SkillPannel title={"backend"} posts={backPosts} />
+        <SkillPannel title={"devops"} posts={devOpsPosts} />
+        <SkillPannel title={"others"} posts={otherPosts} />
       </div>
     </>
   );
