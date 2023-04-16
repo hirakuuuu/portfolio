@@ -13,7 +13,7 @@ const Home = () => {
           <span className="block md:hidden">
             <br />
           </span>
-          <span className="md:mr-6">自然情報学科数理情報系</span>
+          <span className="md:mr-6">自然情報学科数理情報系専攻</span>
           <span className="block md:hidden">
             <br />
           </span>

@@ -15,22 +15,24 @@ const WorkCard = (props: WorkCardProps) => {
   return (
     <div className="my-4">
       <Link href={url}>
-        <div className="text-center text-[#4c5870] ">
+        <div className="text-[#4c5870] ">
           <Image
             src={image}
             alt={name}
-            className="!relative mx-auto !max-h-[200px] !w-[50%] object-contain"
+            className="!md:w-[50%] !relative mx-auto !max-h-[200px] !w-[90%] object-contain"
             fill
           />
-          <div className="text-2xl font-bold">{name}</div>
-          <div className="inline-block text-left text-lg">{detail}</div>
-          <div className="flex justify-center">
-            {tags.map((tag, index) => {
-              return <div key={index}>{tag}</div>;
-            })}
-          </div>
         </div>
       </Link>
+      <div className="text-[#4c5870]">
+        <div className="my-2 text-2xl font-bold">{name}</div>
+        <div className="inline-block text-left text-lg">{detail}</div>
+        <div className="my-2 flex justify-center space-x-2 opacity-75">
+          {tags.map((tag, index) => {
+            return <div key={index}>{tag}</div>;
+          })}
+        </div>
+      </div>
     </div>
   );
 };

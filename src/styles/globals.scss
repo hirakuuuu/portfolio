@@ -51,6 +51,10 @@ body {
   }
 }
 
+.last-experience-pannel {
+  border-image: linear-gradient(to bottom, #4c5870 40%, rgba(#4c5870, 0)) 0 100%;
+}
+
 /*コンタクトフォーム*/
 .form-label {
   -webkit-transition: top 0.2s ease-in-out, font-size 0.2s ease-in-out;

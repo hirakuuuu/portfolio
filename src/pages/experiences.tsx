@@ -10,7 +10,7 @@ import TitleBanner from "@/components/organisms/TitleBanner";
 
 const Experiences = (props: NotionAPIProps) => {
   const { posts } = props;
-  const _posts = posts as NotionPost[];
+  const _posts = [...posts].reverse() as NotionPost[];
   let publishedPosts: NotionPost[] = [];
 
   _posts.map((post: NotionPost) => {
@@ -29,7 +29,7 @@ const Experiences = (props: NotionAPIProps) => {
         <TitleBanner title="experiences" />
       </div>
 
-      <div className="experience-card mx-auto my-10 w-[90%] max-w-[1024px]">
+      <div className="experience-card mx-auto my-10 w-[90%] max-w-[1280px]">
         {publishedPosts.map((post, index) => {
           const postName =
             post.properties.name.type === "title"
@@ -53,6 +53,11 @@ const Experiences = (props: NotionAPIProps) => {
             />
           );
         })}
+        <div
+          className="last-experience-pannel relative -translate-x-[1px]  border-l-2 border-solid border-[#4c5870] pb-6 pl-6
+              pt-10 before:absolute before:left-6 before:top-1 before:block before:pt-2 before:text-sm 
+                before:font-bold before:content-[attr(date-is)] md:ml-[50%] md:pr-6"
+        ></div>
       </div>
     </>
   );

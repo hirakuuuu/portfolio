@@ -9,7 +9,7 @@ import SkillPannel from "@/components/organisms/SkillPannel";
 
 const Skills = (props: NotionAPIProps) => {
   const { posts } = props;
-  const _posts = posts as NotionPost[];
+  const _posts = [...posts].reverse() as NotionPost[];
 
   const frontPosts: NotionPost[] = [];
   const backPosts: NotionPost[] = [];
