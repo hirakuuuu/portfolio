@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --color-main: #ebedec;
+  --color-font: #4c5870;
+}
